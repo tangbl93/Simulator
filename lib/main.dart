@@ -59,7 +59,7 @@ class _SimulatorPageState extends State<SimulatorPage> with TickerProviderStateM
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
 
     // 定时器
-    Timer.periodic(const Duration(seconds: 1), (timer) {
+    Timer.periodic(const Duration(milliseconds: 500), (timer) {
       if (!_autoKnock) return;
       _playMp3();
     });
